@@ -1,0 +1,56 @@
+:root {
+    font-size: 9.5px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+#calculator {
+    display: grid;
+    /* grid-template-areas: "result result result result"
+                         "one two three plus"
+                         "four five six minus"
+                         "seven eight nine multi"; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border: 2px solid black;
+}
+
+#result {
+    grid-column: 1 / 5;
+    background-color:rgba(166, 168, 132, 0.123);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#result-num {
+    align-self: center;
+}
+
+#clear {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid black;
+    padding: 50px;
+}
+
+.button, .button-num {
+    padding: 50px;
+    border: 1px solid black;
+}
+
+.button:hover, .button-num:hover, #clear:hover {
+    background-color: rgba(158, 154, 154, 0.788);
+    cursor: pointer;
+}
