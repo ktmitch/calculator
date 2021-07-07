@@ -56,7 +56,7 @@ function useOperator() {
 
                     
                 console.log("Test")
-                operate(parseInt(input), opOne, parseInt(lastInput))
+                operate(parseFloat(input), opOne, parseFloat(lastInput))
                 console.log("Test on Operate")
             })
         }
@@ -67,22 +67,22 @@ function useOperator() {
 }
 
 function add (num1, num2) {
-    document.getElementById("result-num").innerText = num1 + num2
+    document.getElementById("result-num").innerText = Math.round((num1 + num2 + Number.EPSILON) * 100) / 100
     console.log(num1 + num2)
 }
 
 function sub (num1, num2) {
-    document.getElementById("result-num").innerText = num1 - num2
+    document.getElementById("result-num").innerText = Math.round((num1 - num2 + Number.EPSILON) * 100) / 100
     console.log(num1 - num2)
 }
 
 function multi (num1, num2) {
-    document.getElementById("result-num").innerText = num1 * num2
+    document.getElementById("result-num").innerText = Math.round((num1 * num2 + Number.EPSILON) * 100) / 100
     console.log(num1 * num2)
 }
 
 function div (num1, num2) {
-    document.getElementById("result-num").innerText = num1 / num2
+    document.getElementById("result-num").innerText = Math.round((num1 / num2 + Number.EPSILON) * 100) / 100
     console.log(num1 / num2)
 }
 
